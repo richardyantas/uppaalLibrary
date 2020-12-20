@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_2.dtd'>
+<nta>
+	<declaration>clock GTime;
+// Place global declarations here
+
+clock x;
+
+import "../build/lib/libconfig.so" {
+    double get_num();
+};
+
+
+double NUM=get_num();
+
+//int a = NUM;
+//const int nrSteps = 15; //6(work sometimes)
+//const int step    = 5;    //30, 5
+//const int horizon = step*nrSteps;
+
+double value=5.0;
+
+
+void toogle_value()
+{
+    value=10.0;
+}</declaration>
+	<template>
+		<name x="5" y="5">Template</name>
+		<declaration>// Place local declarations here.</declaration>
+		<location id="id0" x="-815" y="-315">
+			<name x="-858" y="-348">START</name>
+			<label kind="invariant" x="-841" y="-297">x&lt;8</label>
+		</location>
+		<location id="id1" x="-611" y="-315">
+			<name x="-621" y="-349">END</name>
+		</location>
+		<init ref="id0"/>
+		<transition>
+			<source ref="id0"/>
+			<target ref="id1"/>
+			<label kind="guard" x="-748" y="-340">x&gt;3</label>
+			<label kind="assignment" x="-756" y="-306">x=0,
+toogle_value()</label>
+		</transition>
+	</template>
+	<system>// Place template instantiations here.
+Process = Template();
+// List one or more processes to be composed into a system.
+system Process;
+    </system>
+	<queries>
+		<query>
+			<formula></formula>
+			<comment></comment>
+		</query>
+		<query>
+			<formula>simulate 1 [&lt;=10] {value,x,NUM}</formula>
+			<comment></comment>
+		</query>
+	</queries>
+</nta>
