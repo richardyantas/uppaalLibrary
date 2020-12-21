@@ -27,8 +27,6 @@ import sys
 # callUppaal(f)
 #print(callUppaal(f))
 
-
-
 def callUppaal():
   print("calling Uppaal .. ")
   command_line = str(sys.argv[1]) + " " + str(sys.argv[2]) + " " + str(sys.argv[3]) + " --learning-method 5"
@@ -38,11 +36,19 @@ def callUppaal():
 
 # python main.py ../lib/uppaal/bin-Linux/verifyta foo.xml foo.q 
 callUppaal()
-
 # /home/serendipita/Documents/Ans/AugustFiles/software/uppaal64-4.1.20-stratego-7/bin-Linux/verifyta
 
+# */
+# strategy plan = minE (total) [<=200] : <> Robot.Done
 
+# /*
 
+# */
+# simulate 1 [<= 200] {\
+#     Robot.cur_loc, Robot.dest\
+# } under plan
 
+# /*
 
-
+# */
+# saveStrategy("station_strategy.json", plan)

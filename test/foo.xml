@@ -6,12 +6,6 @@
 
 clock x;
 
-import "libconfig.so" {
-    double get_num();
-};
-
-double NUM=get_num();
-
 //int a = NUM;
 //const int nrSteps = 15; //6(work sometimes)
 //const int step    = 5;    //30, 5
@@ -19,6 +13,11 @@ double NUM=get_num();
 
 double value=5.0;
 
+import "libconfig.so" {
+    double get_num();
+};
+
+double NUM=get_num();
 
 void toogle_value()
 {
