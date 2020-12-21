@@ -6,10 +6,9 @@
 
 clock x;
 
-import "../build/lib/libconfig.so" {
+import "libconfig.so" {
     double get_num();
 };
-
 
 double NUM=get_num();
 

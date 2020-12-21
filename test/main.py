@@ -1,5 +1,5 @@
 import os
-
+import sys
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/serendipita/Documents/uppaalLibrary/build/
 # g++ main.cpp -o main build/libconfig.so  #  works after export
 # g++ -I. -L.  main.cpp  -o main -lconfig # works after export, is very important add -I. -L.
@@ -16,16 +16,33 @@ import os
 
 # uppaal setup or libconfig generation ? -> test with lfconfig file of other project
 
-def callUppaal(f):
+# import "../build/lib/libconfig.so" {
+#     double get_num();
+# };
+
+#command_line = "../lib/uppaal/bin-Linux/verifyta foo.xml foo.q --learning-method 5"
+#command_line = "../lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
+#command_line = "/home/serendipita/Documents/uppaalLibrary/lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
+# f = ["foo.xml","foo.q"]
+# callUppaal(f)
+#print(callUppaal(f))
+
+
+
+def callUppaal():
   print("calling Uppaal .. ")
-  #command_line = "../lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
-  command_line = "/home/serendipita/Documents/uppaalLibrary/lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
-  #print(line)
+  command_line = str(sys.argv[1]) + " " + str(sys.argv[2]) + " " + str(sys.argv[3]) + " --learning-method 5"
+  print(command_line)
   n = os.popen(command_line).readlines()
   print(n)
 
+# python main.py ../lib/uppaal/bin-Linux/verifyta foo.xml foo.q 
+callUppaal()
 
-f = ["/home/serendipita/Documents/uppaalLibrary/test/foo.xml", "/home/serendipita/Documents/uppaalLibrary/test/foo.q"]
-callUppaal(f)
-#print(callUppaal(f))
+# /home/serendipita/Documents/Ans/AugustFiles/software/uppaal64-4.1.20-stratego-7/bin-Linux/verifyta
+
+
+
+
+
 
