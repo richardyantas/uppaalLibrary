@@ -56,7 +56,7 @@ void load(){
         return;
     }
     static_config.load_from_file("static_config.json");
-    static_config.load_from_file("dynamic_config.json");
+    //dynamic_config.load_from_file("dynamic_config.json");
     loaded = true;
 }
 
@@ -68,5 +68,6 @@ std::string get_name(std::string name)
 }
 
 CONFIG_GETTER(double, double, static_config, get_tau, 0)
-LIST_GETTER(int, int, dynamic_config, get_patterns);
+CONFIG_GETTER(int, int, static_config, get_number_of_patterns, 0)
+// LIST_GETTER(int, int, dynamic_config, get_patterns);
 

@@ -10,5 +10,5 @@ extern "C" {
     //void set_config_path(char *file_path);
     double get_tau();
     int get_number_of_patterns();
-    void get_patterns(int32_t num_patterns,int patterns);
+    //void get_patterns(int32_t num_patterns,int patterns);
 }

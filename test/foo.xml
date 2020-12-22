@@ -13,12 +13,12 @@ clock x;
 
 double value=5.0;
 
-import "libconfig.so" {
+import "../build/lib/libconfig.so" {
 	double get_tau();
-	//void get_number_of_patterns();
+	int get_number_of_patterns();
 }
 
-//double NUM=get_num();
+//double tau=get_tau();
 
 void toogle_value()
 {
