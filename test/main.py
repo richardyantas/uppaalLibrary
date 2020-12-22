@@ -1,6 +1,6 @@
 import os
 import sys
-# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/serendipita/Documents/uppaalLibrary/build/
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/serendipita/Documents/uppaalLibrary/build/lib/
 # g++ main.cpp -o main build/libconfig.so  #  works after export
 # g++ -I. -L.  main.cpp  -o main -lconfig # works after export, is very important add -I. -L.
 # g++ -I. -L./build/ main.cpp -o main -lconfig  # whe lib is in build

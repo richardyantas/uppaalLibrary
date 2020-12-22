@@ -9,8 +9,8 @@ int main(int argc, char* argv[])
   // ./test_config_json ../../test/data.json
   try{
     // config_wrapper
-    set_config_path(argv[1]);
-    std::cout << get_num() << std::endl;
+    //set_config_path(argv[1]);
+    //std::cout << get_num() << std::endl;
 
 
     // config

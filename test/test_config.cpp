@@ -10,6 +10,6 @@
 
 int main()
 {
-  std::cout << get_num() << std::endl;
+  //std::cout << get_num() << std::endl;
   return 0;
 }

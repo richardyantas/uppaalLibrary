@@ -14,10 +14,11 @@ clock x;
 double value=5.0;
 
 import "libconfig.so" {
-    double get_num();
-};
+	double get_tau();
+	//void get_number_of_patterns();
+}
 
-double NUM=get_num();
+//double NUM=get_num();
 
 void toogle_value()
 {
