@@ -16,7 +16,7 @@ double value=5.0;
 import "../build/lib/libconfig.so" {
 	double get_tau();
 	int get_number_of_patterns();
-}
+};
 
 //double tau=get_tau();
 
