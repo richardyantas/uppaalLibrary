@@ -6,12 +6,13 @@
 //   return 5.0;// json[key]
 // }
 
-#include "config.h"
 
 #include <fstream>
 #include <map>
 #include <string>
 #include <vector>
+
+#include "config.h"
 
 template <>
 std::vector<int> config::convert_from_json<std::vector<int>>(const Json::Value &value)

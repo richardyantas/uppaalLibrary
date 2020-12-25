@@ -6,20 +6,14 @@ import sys
 # g++ -I. -L./build/ main.cpp -o main -lconfig  # whe lib is in build
 # ./main
 #  g++ -I. -I./lib/jsoncpp/include/ -L./build/ -L./build/lib/ main.cpp -o main -lconfig -ljsoncpp
-
 # Check uppaal version: last
-
 # ./lib/uppaal/bin-Linux/verifyta foo.xml foo.q  #without --learning-method 5)
 # ./lib/uppaal/uppaal foo.xml
-
 # uppaaltest foo.xml foo.q
-
 # uppaal setup or libconfig generation ? -> test with lfconfig file of other project
-
 # import "../build/lib/libconfig.so" {
 #     double get_num();
 # };
-
 #command_line = "../lib/uppaal/bin-Linux/verifyta foo.xml foo.q --learning-method 5"
 #command_line = "../lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
 #command_line = "/home/serendipita/Documents/uppaalLibrary/lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"

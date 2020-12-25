@@ -1,6 +1,7 @@
 {
   "get_number_of_patterns":4,
   "get_tau": 5.0,
+  "get_foo": 12.1234,
   "factorTe": 2.5,
   "factorI":  0.8,
   "TwaterIn": 2.5,
