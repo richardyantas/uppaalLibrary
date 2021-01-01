@@ -1,1 +1,1 @@
-simulate 1 [<=10] {value,x,NUM}
+simulate 1 [<=10] {value,x,NUM_PATTERNS}

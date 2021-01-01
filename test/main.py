@@ -1,5 +1,6 @@
 import os
 import sys
+
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/serendipita/Documents/uppaalLibrary/build/lib/
 # g++ main.cpp -o main build/libconfig.so  #  works after export
 # g++ -I. -L.  main.cpp  -o main -lconfig # works after export, is very important add -I. -L.
@@ -15,7 +16,7 @@ import sys
 #     double get_num();
 # };
 #command_line = "../lib/uppaal/bin-Linux/verifyta foo.xml foo.q --learning-method 5"
-#command_line = "../lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
+#command_line = "../lib/uppaal/bin-Linux/veri sfyta " + f[0] + " " + f[1] + " --learning-method 5"
 #command_line = "/home/serendipita/Documents/uppaalLibrary/lib/uppaal/bin-Linux/verifyta " + f[0] + " " + f[1] + " --learning-method 5"
 # f = ["foo.xml","foo.q"]
 # callUppaal(f)
@@ -46,3 +47,6 @@ callUppaal()
 
 # */
 # saveStrategy("station_strategy.json", plan)
+
+
+# /home/serendipita/Documents/uppaalLibrary/lib/uppaal/uppaal test/foo.xml
